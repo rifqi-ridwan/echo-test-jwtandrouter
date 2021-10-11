@@ -31,3 +31,7 @@ func Login(c echo.Context) error {
 		"token": t,
 	})
 }
+
+func JWTErrorChecker(err error, c echo.Context) error {
+	return echo.ErrUnauthorized
+}
